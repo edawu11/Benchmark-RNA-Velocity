@@ -1,0 +1,156 @@
+absl-py==2.1.0
+adjustText==1.3.0
+aiohappyeyeballs==2.5.0
+aiohttp==3.11.13
+aiosignal==1.3.2
+anndata==0.8.0
+asttokens @ file:///croot/asttokens_1743630435401/work
+async-timeout==5.0.1
+attrs==25.1.0
+certifi==2025.1.31
+charset-normalizer==3.4.1
+chex==0.1.7
+click==8.1.8
+cmake==3.31.6
+comm @ file:///croot/comm_1709322850197/work
+cycler==0.12.1
+debugpy @ file:///croot/debugpy_1736267418885/work
+decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
+dm-tree==0.1.9
+docrep==0.3.2
+et_xmlfile==2.0.0
+etils==1.12.0
+exceptiongroup @ file:///croot/exceptiongroup_1706031385326/work
+executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
+filelock==3.17.0
+flax==0.6.11
+fonttools==4.56.0
+frozenlist==1.5.0
+fsspec==2025.2.0
+grpcio==1.70.0
+h5py==3.13.0
+idna==3.10
+igraph==0.11.8
+importlib_resources==6.5.2
+ipykernel @ file:///croot/ipykernel_1737660677549/work
+ipython @ file:///croot/ipython_1734548052611/work
+ipywidgets==8.1.5
+jax==0.4.13
+jaxlib==0.4.13
+jedi @ file:///croot/jedi_1733987392413/work
+Jinja2==3.1.6
+joblib==1.4.2
+jupyter_client @ file:///croot/jupyter_client_1737570961872/work
+jupyter_core @ file:///croot/jupyter_core_1718818295206/work
+jupyterlab_widgets==3.0.13
+kiwisolver==1.4.8
+leidenalg==0.10.2
+lightning-utilities==0.13.1
+lit==18.1.8
+llvmlite==0.41.1
+loompy==3.0.8
+Markdown==3.7
+markdown-it-py==3.0.0
+MarkupSafe==3.0.2
+matplotlib==3.5.2
+matplotlib-inline @ file:///opt/conda/conda-bld/matplotlib-inline_1662014470464/work
+mdurl==0.1.2
+ml_collections==1.0.0
+ml_dtypes==0.5.1
+mpmath==1.3.0
+msgpack==1.1.0
+mudata==0.2.3
+multidict==6.1.0
+multipledispatch==1.0.0
+natsort==8.4.0
+nest-asyncio @ file:///croot/nest-asyncio_1708532673751/work
+networkx==3.4.2
+numba==0.58.1
+numpy==1.23.5
+numpy-groupies==0.11.2
+numpyro==0.12.1
+nvidia-cublas-cu11==11.10.3.66
+nvidia-cuda-cupti-cu11==11.7.101
+nvidia-cuda-nvrtc-cu11==11.7.99
+nvidia-cuda-runtime-cu11==11.7.99
+nvidia-cudnn-cu11==8.5.0.96
+nvidia-cufft-cu11==10.9.0.58
+nvidia-curand-cu11==10.2.10.91
+nvidia-cusolver-cu11==11.4.0.1
+nvidia-cusparse-cu11==11.7.4.91
+nvidia-nccl-cu11==2.14.3
+nvidia-nvtx-cu11==11.7.91
+openpyxl==3.1.5
+opt_einsum==3.4.0
+optax==0.2.1
+orbax-checkpoint==0.5.16
+packaging @ file:///croot/packaging_1734472117206/work
+pandas==1.5.3
+parso @ file:///croot/parso_1733963305961/work
+patsy==1.0.1
+pexpect @ file:///tmp/build/80754af9/pexpect_1605563209008/work
+pillow==11.1.0
+platformdirs==4.3.6
+plotly==5.10.0
+prompt-toolkit @ file:///croot/prompt-toolkit_1704404351921/work
+propcache==0.3.0
+protobuf==6.30.0
+psutil @ file:///croot/psutil_1736367091698/work
+ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
+pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
+pyDeprecate==0.3.2
+Pygments @ file:///croot/pygments_1744664109463/work
+pymde==0.1.18
+pynndescent==0.5.13
+pyparsing==3.2.1
+pyro-api==0.1.2
+pyro-ppl==1.9.1
+python-dateutil @ file:///croot/python-dateutil_1716495738603/work
+pytorch-lightning==1.7.0
+pytz==2025.1
+PyYAML==6.0.2
+pyzmq @ file:///croot/pyzmq_1734687138743/work
+requests==2.32.3
+rich==13.9.4
+scanpy==1.9.6
+scikit-learn==1.6.1
+scikit-misc==0.2.0
+scipy==1.8.0
+scvelo==0.2.5
+scvi-tools==0.19.0
+seaborn==0.13.2
+session_info==1.0.0
+six @ file:///croot/six_1744271502820/work
+stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
+statsmodels==0.14.4
+stdlib-list==0.11.1
+sympy==1.13.3
+tenacity==9.0.0
+tensorboard==2.19.0
+tensorboard-data-server==0.7.2
+tensorstore==0.1.72
+texttable==1.7.0
+threadpoolctl==3.5.0
+toolz==1.0.0
+torch==2.0.0
+torchaudio==2.0.1
+torchmetrics==0.11.4
+torchsde==0.2.6
+torchvision==0.15.1
+tornado @ file:///croot/tornado_1733960490606/work
+tqdm==4.67.1
+traitlets @ file:///croot/traitlets_1718227057033/work
+trampoline==0.1.2
+triton==2.0.0
+tslearn==0.5.3.2
+typing_extensions @ file:///croot/typing_extensions_1734714854207/work
+umap-learn==0.5.7
+urllib3==2.3.0
+# Editable install with no version control (velvetvae==0.1.dev0)
+-e /root/autodl-tmp/github/velvetVAE-main/velvetVAE-main
+wcwidth==0.2.13
+Werkzeug==3.1.3
+widgetsnbextension==4.0.13
+wrapt==1.17.2
+yarl==1.18.3
+zipp==3.21.0
