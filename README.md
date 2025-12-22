@@ -1,14 +1,14 @@
 # Comprehensive benchmarking of RNA velocity methods across single-cell datasets
 
 ## Description
-<!-- we systematically benchmark 19 RNA velocity tools (30 variants), including 25 splicing dynamic-based and 5 multimodal-enhanced methods, across 26 datasets. We ranked methods’ performance across four core tasks: directional consistency, temporal precision, negative control robustness, and sequencing depth stability. Additionally, we further characterized the methods by assessing quantification stability, multimodal integration, simulation experiment, and computational scalability. Overall, cellDancer, SDEvelo, and UniTVelo (uni) emerged as top methods in the core tasks, however, no single method performs optimally across all benchmark scenarios, highlighting task-specific strengths and weaknesses. -->
+We present a comprehensive benchmark of 19 computational RNA velocity tools covering 30 distinct methods. We systematically evaluate 25 splicing dynamics based methods on 8 evaluation tasks, while assessing 5 multimodal-enhanced methods specifically on the multimodal integration task leveraging additional modalities. These assessments utilize 26 datasets that encompass 20 real-world and 6 simulated scenarios. Overall, cellDancer, Pyro-Velocity (m2), and SDEvelo emerge as top methods in the core tasks; however, no method consistently performs well across all benchmark scenarios, highlighting task-specific strengths and weaknesses.
 
 <!-- ![Pipeline](pipeline.png)
 
 These methods utilize a variety of clustering strategies, including community detection-based, machine learning-based, deep learning-based, to analyze and cluster single-cell transcriptomic and proteomic data. Below is a collection of useful links and titles for each method. -->
 
 ## RNA velocity methods List
-### Splicing dynamics-based 
+### Splicing dynamics based 
 | ID | Method | Paper | Code/Tutorial |
 |:--:|:-------|:------|:--------------|
 | 1 | Velocyto | [RNA velocity of single cells](https://www.nature.com/articles/s41586-018-0414-6) | [Tutorial](https://velocyto.org/) |
@@ -70,3 +70,7 @@ These methods utilize a variety of clustering strategies, including community de
 
 <!-- ## Acknowledgments
 We would like to express our sincere appreciation to the developers of the single-cell clustering methods  and multi-omics integration approaches included in this benchmark. Their pioneering work has significantly advanced the field, making it possible to conduct in-depth analyses of multi-omics data. -->
+
+## 📖 Reference
+
+Yida Wu, Chuihan Kong, Xu Liao, Zhixiang Lin, Xiaobo Sun, Jin Liu. Comprehensive benchmarking of RNA velocity methods across single-cell datasets. Preprint. 2025.

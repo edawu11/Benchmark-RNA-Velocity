@@ -28,10 +28,10 @@ if SAVE_DATA:
 def run_scvelo_dyn(fold):
     adata = sc.read_h5ad(DATA_DIR / DATASET / "processed" / f"adata_preprocessed_{fold}.h5ad")
     scv.tl.recover_dynamics(adata)
-    scv.tl.velocity(adata, mode="dynamical", vkey='scvelo_dy_velocity')
-    scv.tl.velocity_graph(adata,vkey = 'scvelo_dy_velocity')
-    scv.tl.latent_time(adata,vkey='scvelo_dy_velocity')
-    adata.obs['scvelo_dy_time'] = adata.obs['latent_time']
+    scv.tl.velocity(adata, mode="dynamical", vkey='scvelo_dyn_velocity')
+    scv.tl.velocity_graph(adata,vkey = 'scvelo_dyn_velocity')
+    scv.tl.latent_time(adata,vkey='scvelo_dyn_velocity')
+    adata.obs['scvelo_dyn_time'] = adata.obs['latent_time']
     if SAVE_DATA:
         adata.write_h5ad(DATA_DIR / DATASET / "processed" / f"adata_run_scvelo_dyn_{fold}.h5ad")
     del adata
