@@ -1,0 +1,26 @@
+Method,DL,rank,real
+SDEvelo,0,1,3
+scVelo (dyn),0,2,22
+Velocyto,0,3,7
+κ-velo,0,4,20
+scVelo (stc),0,5,5
+GraphVelo (std),0,6,24
+Dynamo (m1),0,6,15
+UniTVelo (uni),0,8,4
+DeepVelo,1,9,8
+Pyro-Velocity (m2),0,10,2
+VeloAE,1,11,15
+veloVI,1,12,8
+UniTVelo (ind),0,13,6
+TIVelo (std),0,14,10
+cell2fate,0,15,19
+SvelvetVAE,1,16,14
+Pyro-Velocity (m1),0,16,23
+TIVelo (simple),0,18,15
+scTour (ZINB),1,19,11
+LatentVelo (std),1,19,15
+scTour (NB),1,21,12
+VeloVAE (Full VB),1,22,21
+VeloVAE (std),1,23,13
+scTour (MSE),1,24,25
+cellDancer,1,24,1
