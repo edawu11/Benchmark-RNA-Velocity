@@ -1,10 +1,10 @@
 # Comprehensive benchmarking of RNA velocity methods across single-cell datasets
 
-## Description
+## 📝 Description
 We present a comprehensive benchmark of 19 computational RNA velocity tools encompassing 30 distinct methods. We systematically evaluate 25 splicing dynamics--based methods across eight evaluation tasks, including directional consistency, temporal precision, negative control robustness, and sequencing depth stability as core tasks, while assessing five multimodal-enhanced methods specifically on the multimodal integration task. These assessments utilize 26 datasets encompassing 20 real-world and six simulated scenarios.
 
-## RNA velocity methods
-### Splicing dynamics--based 
+## 🚀 RNA Velocity Methods
+### ✂️ Splicing Dynamics–based 
 | ID | Method | Paper | Code/Tutorial |
 |:--:|:-------|:------|:--------------|
 | 1 | Velocyto | [RNA velocity of single cells](https://www.nature.com/articles/s41586-018-0414-6) | [Tutorial](https://velocyto.org/) |
@@ -25,7 +25,7 @@ We present a comprehensive benchmark of 19 computational RNA velocity tools enco
 | 16 | TIVelo | [TIVelo: RNA velocity estimation leveraging cluster-level trajectory inference](https://www.nature.com/articles/s41467-025-61628-x) | [GitHub](https://github.com/cuhklinlab/TIVelo); [Tutorial](https://tivelo.readthedocs.io/en/latest/) |
 | 17 | GraphVelo | [GraphVelo allows for accurate inference of multimodal velocities and molecular mechanisms for single cells](https://www.nature.com/articles/s41467-025-62784-w) | [GitHub](https://github.com/xing-lab-pitt/GraphVelo); [Tutorial](https://graphvelo.readthedocs.io/en/latest/) |
 
-### Multimodal-enhanced 
+### 🧬 Multimodal-enhanced 
 | ID | Method | Modality | Paper | Code/Tutorial |
 |:--:|:-------|:-------|:------|:--------------|
 | 1 | protaccel | Protein abundance | [Protein velocity and acceleration from single-cell multiomics experiments](https://link.springer.com/article/10.1186/s13059-020-1945-3) | [PyPi](https://pypi.org/project/protaccel/0.301/); [Tutorial](https://github.com/pachterlab/GSP_2019) |
@@ -40,7 +40,7 @@ We present a comprehensive benchmark of 19 computational RNA velocity tools enco
 
 *Note: In our benchmark study, we specifically focus on methods enhanced by chromatin accessibility and metabolic labeling.*
 
-## Dataset information
+## 📂 Dataset Information
 | Data ID |  Dataset  | Access Method / Download Link |
 |:-------:|:----------|:------------------------------|
 | **Data 1** | Bone marrow | `scvelo.datasets.bonemarrow()` |
@@ -66,17 +66,17 @@ We present a comprehensive benchmark of 19 computational RNA velocity tools enco
 
 *Note: Different datasets correspond to specific benchmark tasks; please refer to our benchmark paper for further details.*
 
-## Implementation
+## 🛠️ Implementation
 For convenience, environment configuration files are provided in the `env` directory.
 
-### Preprocessing
+### ⚙️ Preprocessing
 The `preprocessing` folder contains notebooks for:
 * Preprocessing real-world datasets.
 * Simulating sequencing depth variations.
 * Processing quantification data.
 * Generating synthetic data using dynamical models.
 
-### Running RNA Velocity Methods
+### ▶️ Running RNA Velocity Methods
 We provide Python scripts for each RNA velocity method, paired with their corresponding Conda environments. These pipelines can be executed directly using the provided shell scripts.
 
 For example, to run all splicing dynamics-based methods on **Data 1** (Bone Marrow), execute the following command:
@@ -85,10 +85,10 @@ For example, to run all splicing dynamics-based methods on **Data 1** (Bone Marr
 bash run_all_spliced.sh bone_marrow clusters X_umap 3 1234
 ```
 
-### Evaluation and visualization
+### ⚖️ Evaluation and Visualization
 For evaluation and visualization, we developed the Python package [VeloEV](https://github.com/edawu11/VeloEV). Please refer to the [documentation](veloev.readthedocs.io/en/latest/) for detailed tutorials.
 
-## Figure reproduction
+## 📊 Figure Reproduction
 To facilitate reproducibility, the `Figure_reproduction` directory contains all summary results and notebooks required to regenerate the figures presented in the manuscript and supplementary materials.
 
 ## 📖 Reference
