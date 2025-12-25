@@ -1,14 +1,10 @@
 # Comprehensive benchmarking of RNA velocity methods across single-cell datasets
 
 ## Description
-We present a comprehensive benchmark of 19 computational RNA velocity tools covering 30 distinct methods. We systematically evaluate 25 splicing dynamics based methods on 8 evaluation tasks, while assessing 5 multimodal-enhanced methods specifically on the multimodal integration task leveraging additional modalities. These assessments utilize 26 datasets that encompass 20 real-world and 6 simulated scenarios. Overall, cellDancer, Pyro-Velocity (m2), and SDEvelo emerge as top methods in the core tasks; however, no method consistently performs well across all benchmark scenarios, highlighting task-specific strengths and weaknesses.
+We present a comprehensive benchmark of 19 computational RNA velocity tools encompassing 30 distinct methods. We systematically evaluate 25 splicing dynamics--based methods across eight evaluation tasks, including directional consistency, temporal precision, negative control robustness, and sequencing depth stability as core tasks, while assessing five multimodal-enhanced methods specifically on the multimodal integration task. These assessments utilize 26 datasets encompassing 20 real-world and six simulated scenarios.
 
-<!-- ![Pipeline](pipeline.png)
-
-These methods utilize a variety of clustering strategies, including community detection-based, machine learning-based, deep learning-based, to analyze and cluster single-cell transcriptomic and proteomic data. Below is a collection of useful links and titles for each method. -->
-
-## RNA velocity methods List
-### Splicing dynamics based 
+## RNA velocity methods
+### Splicing dynamics--based 
 | ID | Method | Paper | Code/Tutorial |
 |:--:|:-------|:------|:--------------|
 | 1 | Velocyto | [RNA velocity of single cells](https://www.nature.com/articles/s41586-018-0414-6) | [Tutorial](https://velocyto.org/) |
@@ -29,47 +25,71 @@ These methods utilize a variety of clustering strategies, including community de
 | 16 | TIVelo | [TIVelo: RNA velocity estimation leveraging cluster-level trajectory inference](https://www.nature.com/articles/s41467-025-61628-x) | [GitHub](https://github.com/cuhklinlab/TIVelo); [Tutorial](https://tivelo.readthedocs.io/en/latest/) |
 | 17 | GraphVelo | [GraphVelo allows for accurate inference of multimodal velocities and molecular mechanisms for single cells](https://www.nature.com/articles/s41467-025-62784-w) | [GitHub](https://github.com/xing-lab-pitt/GraphVelo); [Tutorial](https://graphvelo.readthedocs.io/en/latest/) |
 
-
 ### Multimodal-enhanced 
-<!-- |ID | Methods                                                                 | Title                                                                                                               |Code|
-|:-------:|:------------------------------------------------------------------------:|---------------------------------------------------------------------------------------------------------------------|:--:| -->
+| ID | Method | Modality | Paper | Code/Tutorial |
+|:--:|:-------|:-------|:------|:--------------|
+| 1 | protaccel | Protein abundance | [Protein velocity and acceleration from single-cell multiomics experiments](https://link.springer.com/article/10.1186/s13059-020-1945-3) | [PyPi](https://pypi.org/project/protaccel/0.301/); [Tutorial](https://github.com/pachterlab/GSP_2019) |
+| 2 | MultiVelo | Chromatin accessibility | [Multi-omic single-cell velocity models epigenome–transcriptome interactions and improves cell fate prediction](https://www.nature.com/articles/s41587-022-01476-y) | [GitHub](https://github.com/welch-lab/MultiVelo); [Tutorial](https://multivelo.readthedocs.io/en/latest/) |
+| 3 | PhyloVelo | Phylogenetic tree | [PhyloVelo enhances transcriptomic velocity field mapping using monotonically expressed genes](https://www.nature.com/articles/s41587-023-01887-5) | [GitHub](https://github.com/kunwang34/PhyloVelo); [Tutorial](https://phylovelo.readthedocs.io/) |
+| 4 | VelvetVAE | Metabolic labeling | [Reconstructing developmental trajectories using latent dynamical systems and time-resolved transcriptomics](https://www.sciencedirect.com/science/article/pii/S2405471224001194?via%3Dihub) | [GitHub](https://github.com/rorymaizels/velvetVAE); [Tutorial](https://github.com/rorymaizels/Maizels2023aa/blob/main/analysis/A2.2_benchmarking/B01_velvet_benchmarking.py) |
+| 5 | STT | Spatial transcriptomics | [Spatial transition tensor of single cells](https://www.nature.com/articles/s41592-024-02266-x) | [GitHub](https://github.com/cliffzhou92/STT/tree/release); [Tutorial](https://github.com/cliffzhou92/STT/tree/release/example_notebooks) |
+| 6 | RegVelo | Gene regulatory network| [RegVelo: gene-regulatory-informed dynamics of single cells](https://www.biorxiv.org/content/10.1101/2024.12.11.627935v1) | [GitHub](https://github.com/theislab/RegVelo); [Tutorial](https://regvelo.readthedocs.io/en/latest/) |
+| 7 | TFvelo | Transcription factors | [TFvelo: gene regulation inspired RNA velocity estimation](https://www.nature.com/articles/s41467-024-45661-w) | [GitHub](https://github.com/xiaoyeye/TFvelo) |
+| 8 | spVelo | Spatial transcriptomics | [spVelo: RNA velocity inference for multi-batch spatial transcriptomics data](https://link.springer.com/article/10.1186/s13059-025-03701-8) | [GitHub](https://github.com/VivLon/spVelo); [Tutorial](https://github.com/VivLon/spVelo/blob/main/tutorial.ipynb) |
+| 9 | TopoVelo | Spatial transcriptomics | [Topological velocity inference from spatial transcriptomic data](https://www.nature.com/articles/s41587-025-02688-8) | [GitHub](https://github.com/welch-lab/TopoVelo); [Tutorial](https://github.com/welch-lab/TopoVelo/tree/main/notebooks/tutorial) |
 
-<!-- |1| [protaccel](https://scanpy.readthedocs.io/en/stable/)                   | Fast unfolding of communities in large networks.  |[Link](https://iopscience.iop.org/article/10.1088/1742-5468/2008/10/P10008/meta)|
-|2| [MultiVelo](https://github.com/jlakkis/CarDEC)                          | A joint deep learning model enables simultaneous batch effect correction, denoising, and clustering in single-cell transcriptomics. |[34035047](https://pubmed.ncbi.nlm.nih.gov/34035047/)|
-|3| [PhyloVelo](https://github.com/biovault/SCHNELpy)                        | SCHNEL: scalable clustering of high dimensional single-cell data.                                                  |[33381821](https://pubmed.ncbi.nlm.nih.gov/33381821/)|
-|4| [VelvetVAE](https://github.com/xuebaliang/scziDesk)                   | Deep soft K-means clustering with self-training for single-cell RNA sequence data.                                  |[33575592](https://pubmed.ncbi.nlm.nih.gov/33575592/)|
-|5| [STT](https://www.bioconductor.org/packages/release/bioc/html/DepecheR.html) | Determination of essential phenotypic elements of clusters in high-dimensional entities—DEPECHE.        |[30845234](https://pubmed.ncbi.nlm.nih.gov/30845234/)|
-|6| [RegVelo](https://github.com/SofieVG/FlowSOM)                        | FlowSOM: Using self-organizing maps for visualization and interpretation of cytometry data.                         |[25573116](https://pubmed.ncbi.nlm.nih.gov/25573116/)|
-|7| [TFvelo](https://cran.r-project.org/web/packages/Spectrum/index.html) | Spectrum: fast density-aware spectral clustering for single and multi-omic data.                                 |[31501851](https://pubmed.ncbi.nlm.nih.gov/31501851/)|
-|8| [spVelo](https://cole-trapnell-lab.github.io/monocle3/docs/clustering/) | The single-cell transcriptional landscape of mammalian organogenesis.                                          |[30787437](https://pubmed.ncbi.nlm.nih.gov/30787437/)|
-|9| [TopoVelo](https://github.com/ZhenyiWangTHU/MarkovHC)  | MarkovHC: Markov hierarchical clustering for the topological structure of high-dimensional single-cell omics data with transition pathway and critical point detection. |[34850940](https://pubmed.ncbi.nlm.nih.gov/34850940/)| -->
+*Note: In our benchmark study, we specifically focus on methods enhanced by chromatin accessibility and metabolic labeling.*
 
+## Dataset information
+| Data ID |  Dataset  | Access Method / Download Link |
+|:-------:|:----------|:------------------------------|
+| **Data 1** | Bone marrow | `scvelo.datasets.bonemarrow()` |
+| **Data 2** | Dentate gyrus | `scvelo.datasets.dentategyrus()` |
+| **Data 3** | Gastrulation | `scvelo.datasets.gastrulation_erythroid()` |
+| **Data 4** | Pancreas | `scvelo.datasets.pancreas()` |
+| **Data 5** | scEU-seq organoid | `dynamo.sample_data.scEU_seq_organoid()` |
+| **Data 6** | scNT-seq cortical neuron | `dynamo.scNT_seq_neuron_splicing()`<br>`dynamo.scNT_seq_neuron_labeling()` |
+| **Data 7** | FUCCI U2OS | [Figshare Download](https://figshare.com/articles/dataset/FUCCI_U2OS_cells/22773761?file=40461716) |
+| **Data 8** | Murine embryonic | GEO: [GSE142425](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142425) |
+| **Data 9** | Reprogramming (Morris) | `cellrank.datasets.reprogramming_morris()` |
+| **Data 10** | Reprogramming (Schiebinger)| GEO: [GSE122662](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122662) |
+| **Data 11** | PBMC68k | `scvelo.datasets.pbmc68k()` |
+| **Data 12** | PBMC194 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/pbm-cs-from-a-healthy-donor-whole-transcriptome-analysis-3-1-standard-4-0-0) |
+| **Data 13** | PBMC381 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/8-k-pbm-cs-from-a-healthy-donor-2-standard-2-1-0) |
+| **Data 14** | PBMC497 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/pbm-cs-from-a-healthy-donor-targeted-immunology-panel-3-1-standard-4-0-0) |
+| **Data 15** | PBMC769 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/10-k-pbm-cs-from-a-healthy-donor-v-3-chemistry-3-standard-3-0-0) |
+| **Data 16** | ATAC brain | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/fresh-embryonic-e-18-mouse-brain-5-k-1-standard-1-0-0)<br>Processed: [GitHub](https://github.com/welch-lab/MultiVelo/tree/main/Examples) |
+| **Data 17** | ATAC HSPC | Processed: [Figshare (RNA)](https://doi.org/10.6084/m9.figshare.22575358.v1), [Figshare (ATAC)](https://doi.org/10.6084/m9.figshare.22575343.v1)<br>Raw: [GSE70677](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70677) |
+| **Data 18** | ATAC skin | Processed: [Figshare (RNA)](https://doi.org/10.6084/m9.figshare.22575307.v1), [Figshare (ATAC)](https://doi.org/10.6084/m9.figshare.22575313.v1)<br>Raw: [GSE140203](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140203) |
+| **Data 19** | FUCCI RPE1 | [Figshare Download](https://figshare.com/articles/dataset/FUCCI_RPE1_cells/22773776/1?file=40461722) |
+| **Data 20** | scNT-seq hematopoiesis dynamics | `dyn.sample_data.hematopoiesis_raw()`|
+
+*Note: Different datasets correspond to specific benchmark tasks; please refer to our benchmark paper for further details.*
 
 ## Implementation
-<!-- To ensure the environment is properly configured for the specific requirements of each clustering method, begin by confirming that all dependencies and packages required by both Python and R scripts are installed. After the environment setup is complete, proceed to perform benchmarking tests for the clustering methods by running the following scripts: -->
+For convenience, environment configuration files are provided in the `env` directory.
 
-<!-- ### For Python-based Clustering Algorithms
-- **Scripts**:
-  - `./ClusteringAlgorithms_Python/script_rna_adt_clustering.py`
-  - `./ClusteringAlgorithms_Python/script_integration_clustering.py`
-- **Purpose**: These scripts implement and evaluate various Python-based clustering algorithms, providing insights into the efficiency and accuracy of each method.
-- **Execution**: Run the scripts in your Python environment.
-  ```bash
-  python script_rna_adt_clustering.py
-  python script_integration_clustering.py -->
+### Preprocessing
+The `preprocessing` folder contains notebooks for:
+* Preprocessing real-world datasets.
+* Simulating sequencing depth variations.
+* Processing quantification data.
+* Generating synthetic data using dynamical models.
 
-<!-- ### For R-based Clustering Algorithms
-- **Scripts**:
-  - `./ClusteringAlgorithms_R/script_rna_adt_clustering.R`
-  - `./ClusteringAlgorithms_R/script_integration_clustering.R`
-- **Purpose**: These scripts implement and evaluate various R-based clustering algorithms, providing insights into the efficiency and accuracy of each method.
-- **Execution**: Run the scripts in your R environment.
-  ```R
-  source("script_rna_adt_clustering.R")
-  source("script_integration_clustering.R") -->
+### Running RNA Velocity Methods
+We provide Python scripts for each RNA velocity method, paired with their corresponding Conda environments. These pipelines can be executed directly using the provided shell scripts.
 
-<!-- ## Acknowledgments
-We would like to express our sincere appreciation to the developers of the single-cell clustering methods  and multi-omics integration approaches included in this benchmark. Their pioneering work has significantly advanced the field, making it possible to conduct in-depth analyses of multi-omics data. -->
+For example, to run all splicing dynamics-based methods on **Data 1** (Bone Marrow), execute the following command:
+
+```bash
+bash run_all_spliced.sh bone_marrow clusters X_umap 3 1234
+```
+
+### Evaluation and visualization
+For evaluation and visualization, we developed the Python package [VeloEV](https://github.com/edawu11/VeloEV). Please refer to the [documentation](veloev.readthedocs.io/en/latest/) for detailed tutorials.
+
+## Figure reproduction
+To facilitate reproducibility, the `Figure_reproduction` directory contains all summary results and notebooks required to regenerate the figures presented in the manuscript and supplementary materials.
 
 ## 📖 Reference
 

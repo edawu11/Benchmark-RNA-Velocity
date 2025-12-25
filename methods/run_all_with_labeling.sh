@@ -26,62 +26,12 @@ seed="${5:-}"
 
 # Declare mapping: script => conda env
 declare -A jobs=(
-  [01_run_velocyto.py]=py310_pt212
-  [02_run_scvelo_dyn.py]=py310_pt212
-  [03_run_scvelo_stc.py]=py310_pt212
-  [04_run_veloae.py]=py310_pt212
-  [05_run_dynamo_m1.py]=py310_pt212
-  [06_run_pyrovelocity_m1.py]=py311_pt221
-  [07_run_pyrovelocity_m2.py]=py311_pt221
-  [08_run_unitvelo_uni.py]=py310_tf213
-  [09_run_unitvelo_ind.py]=py310_tf213
-  [10_run_velovae_std.py]=py310_pt212
-  [11_run_velovae_fullvb.py]=py310_pt212
-  [12_run_kvelo.py]=py310_pt212
-  [13_run_celldancer.py]=py37_pt110
-  [14_run_velovi.py]=py310_pt260
-  [15_run_latentvelo_std.py]=py310_pt260
-  [16_run_sctour_mse.py]=py39_pt271
-  [17_run_sctour_nb.py]=py39_pt271
-  [18_run_sctour_zinb.py]=py39_pt271
-  [19_run_deepvelo.py]=py39_pt113
-  [20_run_sdevelo.py]=py310_pt212
-  [21_run_svelvetvae.py]=py310_pt200
-  [22_run_cell2fate.py]=py39_pt111
-  [23_run_tivelo_std.py]=py39_pt250
-  [24_run_tivelo_simple.py]=py39_pt250
-  [25_run_graphvelo_std.py]=py310_pt212
   [26_run_dynamo_m2.py]=py310_pt212
   [27_run_velvetvae.py]=py310_pt200
 )
 
 # Ordered list of scripts to execute
 ordered_scripts=(
-  01_run_velocyto.py
-  02_run_scvelo_dyn.py
-  03_run_scvelo_stc.py
-  04_run_veloae.py
-  05_run_dynamo_m1.py
-  06_run_pyrovelocity_m1.py
-  07_run_pyrovelocity_m2.py
-  08_run_unitvelo_uni.py
-  09_run_unitvelo_ind.py
-  10_run_velovae_std.py
-  11_run_velovae_fullvb.py
-  12_run_kvelo.py
-  13_run_celldancer.py
-  14_run_velovi.py
-  15_run_latentvelo_std.py
-  16_run_sctour_mse.py
-  17_run_sctour_nb.py
-  18_run_sctour_zinb.py
-  19_run_deepvelo.py
-  20_run_sdevelo.py
-  21_run_svelvetvae.py
-  22_run_cell2fate.py
-  23_run_tivelo_std.py
-  24_run_tivelo_simple.py
-  25_run_graphvelo_std.py
   26_run_dynamo_m2.py
   27_run_velvetvae.py
 )
