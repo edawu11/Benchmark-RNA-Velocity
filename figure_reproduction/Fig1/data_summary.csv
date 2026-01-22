@@ -1,0 +1,31 @@
+﻿ID,data,species,task,cell,gene
+1,Bone marrow,human,1,5780,14319
+2,Cerebral cortex,human,1,54542,32648
+3,Dentate gyrus,mouse,"1, 4",2930,13913
+4,Gastrulation erythroid,mouse,"1, 2, 4",9815,53801
+5,Pancreas,mouse,"1, 5",3696,27998
+6,scEU-seq organoid,mouse,"1, 4, 7",3831,9157
+7,scNT-seq embryo-like stem,mouse,"1,7",13476,44021
+8,FUCCI_U2OS,mouse,"2, 4",1146,19997
+9,Murine embryonic,mouse,"2, 4",10854,24651
+10,Primary visual cortex,mouse,2,91681,24558
+11,Reprogramming (morris),mouse,2,85010,22630
+12,Reprogramming (schiebinger),mouse,2,165522,17965
+13,PBMC68k,human,3,65877,33939
+14,PBMC194,human,3,10194,36601
+15,PBMC381,human,3,8381,36601
+16,PBMC497,human,3,10497,36601
+17,PBMC769,human,3,11769,36601
+18,ATAC_brain,mouse,7,3365,936
+19,ATAC_HSPC,human,7,11605,1000
+20,ATAC_skin,mouse,7,6436,962
+21,scEU-seq cell cycle,mouse,7,2793,11848
+22,scNT-seq hematopoiesis dynamics,human,7,1947,26193
+23,ODE 100,,6,1500,100
+24,ODE 500,,6,1500,500
+25,SDE 100,,6,1600,100
+26,SDE 100,,6,1600,500
+27,Dyngen (linear),,6,1500,219
+28,Dyngen (bifurcating),,6,1500,233
+29,Scalability (cells),,8,0,1000
+30,Scalability (genes),,8,10000,0

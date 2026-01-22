@@ -1,0 +1,12 @@
+genes,execution_time_sec,peak_memory_mb,status
+2000,,,running
+2000,1178.424788,,written
+2000,1759.645716,4294.075422,success
+5000,,,running
+5000,6792.291677,,written
+5000,7108.883438,8610.202626,success
+10000,,,running
+15000,,,running
+20000,,,running
+20000,7.196171409,,error
+1000,1520.017012,3327.893044,success
