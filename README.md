@@ -1,7 +1,7 @@
 # Comprehensive benchmarking of RNA velocity methods across single-cell datasets
 
 ## 📝 Description
-We present a comprehensive benchmark of 19 computational RNA velocity tools encompassing 30 distinct methods. We systematically evaluate 25 splicing dynamics--based methods across eight evaluation tasks, including directional consistency, temporal precision, negative control robustness, and sequencing depth stability as core tasks, while assessing five multimodal-enhanced methods specifically on the multimodal integration task. These assessments utilize 26 datasets encompassing 20 real-world and six simulated scenarios.
+We present a comprehensive benchmark of 19 computational RNA velocity tools covering 30 distinct methods. We systematically evaluate 25 splicing dynamics--based methods across eight evaluation tasks, designating directional consistency, temporal precision, negative control robustness, and sequencing depth stability as core tasks, while assessing five multimodal-enhanced methods specifically on the multimodal integration task. These assessments utilize 30 datasets encompassing 22 real-world and eight simulated scenarios.
 
 ## 🚀 RNA Velocity Methods
 ### ✂️ Splicing Dynamics–based 
@@ -44,25 +44,27 @@ We present a comprehensive benchmark of 19 computational RNA velocity tools enco
 | Data ID |  Dataset  | Access Method / Download Link |
 |:-------:|:----------|:------------------------------|
 | **Data 1** | Bone marrow | `scvelo.datasets.bonemarrow()` |
-| **Data 2** | Dentate gyrus | `scvelo.datasets.dentategyrus()` |
-| **Data 3** | Gastrulation | `scvelo.datasets.gastrulation_erythroid()` |
-| **Data 4** | Pancreas | `scvelo.datasets.pancreas()` |
-| **Data 5** | scEU-seq organoid | `dynamo.sample_data.scEU_seq_organoid()` |
-| **Data 6** | scNT-seq cortical neuron | `dynamo.scNT_seq_neuron_splicing()`<br>`dynamo.scNT_seq_neuron_labeling()` |
-| **Data 7** | FUCCI U2OS | [Figshare Download](https://figshare.com/articles/dataset/FUCCI_U2OS_cells/22773761?file=40461716) |
-| **Data 8** | Murine embryonic | GEO: [GSE142425](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142425) |
-| **Data 9** | Reprogramming (Morris) | `cellrank.datasets.reprogramming_morris()` |
-| **Data 10** | Reprogramming (Schiebinger)| GEO: [GSE122662](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122662) |
-| **Data 11** | PBMC68k | `scvelo.datasets.pbmc68k()` |
-| **Data 12** | PBMC194 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/pbm-cs-from-a-healthy-donor-whole-transcriptome-analysis-3-1-standard-4-0-0) |
-| **Data 13** | PBMC381 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/8-k-pbm-cs-from-a-healthy-donor-2-standard-2-1-0) |
-| **Data 14** | PBMC497 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/pbm-cs-from-a-healthy-donor-targeted-immunology-panel-3-1-standard-4-0-0) |
-| **Data 15** | PBMC769 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/10-k-pbm-cs-from-a-healthy-donor-v-3-chemistry-3-standard-3-0-0) |
-| **Data 16** | ATAC brain | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/fresh-embryonic-e-18-mouse-brain-5-k-1-standard-1-0-0)<br>Processed: [GitHub](https://github.com/welch-lab/MultiVelo/tree/main/Examples) |
-| **Data 17** | ATAC HSPC | Processed: [Figshare (RNA)](https://doi.org/10.6084/m9.figshare.22575358.v1), [Figshare (ATAC)](https://doi.org/10.6084/m9.figshare.22575343.v1)<br>Raw: [GSE70677](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70677) |
-| **Data 18** | ATAC skin | Processed: [Figshare (RNA)](https://doi.org/10.6084/m9.figshare.22575307.v1), [Figshare (ATAC)](https://doi.org/10.6084/m9.figshare.22575313.v1)<br>Raw: [GSE140203](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140203) |
-| **Data 19** | FUCCI RPE1 | [Figshare Download](https://figshare.com/articles/dataset/FUCCI_RPE1_cells/22773776/1?file=40461722) |
-| **Data 20** | scNT-seq hematopoiesis dynamics | `dyn.sample_data.hematopoiesis_raw()`|
+| **Data 2** | Cerebral cortex  | GEO: [GSE162170](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE162170) |
+| **Data 3** | Dentate gyrus | `scvelo.datasets.dentategyrus()` |
+| **Data 4** | Gastrulation | `scvelo.datasets.gastrulation_erythroid()` |
+| **Data 5** | Pancreas | `scvelo.datasets.pancreas()` |
+| **Data 6** | scEU-seq organoid | `dynamo.sample_data.scEU_seq_organoid()` |
+| **Data 7** | scNT-seq cortical neuron | `dynamo.scNT_seq_neuron_splicing()`<br>`dynamo.scNT_seq_neuron_labeling()` |
+| **Data 8** | FUCCI U2OS | [Figshare Download](https://figshare.com/articles/dataset/FUCCI_U2OS_cells/22773761?file=40461716) |
+| **Data 9** | Murine embryonic | GEO: [GSE142425](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE142425) |
+| **Data 10** | Primary visual cortex| GEO: [GSE190940](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190940) |
+| **Data 11** | Reprogramming (Morris) | `cellrank.datasets.reprogramming_morris()` |
+| **Data 12** | Reprogramming (Schiebinger)| GEO: [GSE122662](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122662) |
+| **Data 13** | PBMC68k | `scvelo.datasets.pbmc68k()` |
+| **Data 14** | PBMC194 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/pbm-cs-from-a-healthy-donor-whole-transcriptome-analysis-3-1-standard-4-0-0) |
+| **Data 15** | PBMC381 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/8-k-pbm-cs-from-a-healthy-donor-2-standard-2-1-0) |
+| **Data 16** | PBMC497 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/pbm-cs-from-a-healthy-donor-targeted-immunology-panel-3-1-standard-4-0-0) |
+| **Data 17** | PBMC769 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/10-k-pbm-cs-from-a-healthy-donor-v-3-chemistry-3-standard-3-0-0) |
+| **Data 18** | ATAC brain | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/fresh-embryonic-e-18-mouse-brain-5-k-1-standard-1-0-0)<br>Processed: [GitHub](https://github.com/welch-lab/MultiVelo/tree/main/Examples) |
+| **Data 19** | ATAC HSPC | Processed: [Figshare (RNA)](https://doi.org/10.6084/m9.figshare.22575358.v1), [Figshare (ATAC)](https://doi.org/10.6084/m9.figshare.22575343.v1)<br>Raw: [GSE70677](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70677) |
+| **Data 20** | ATAC skin | Processed: [Figshare (RNA)](https://doi.org/10.6084/m9.figshare.22575307.v1), [Figshare (ATAC)](https://doi.org/10.6084/m9.figshare.22575313.v1)<br>Raw: [GSE140203](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140203) |
+| **Data 21** | FUCCI RPE1 | [Figshare Download](https://figshare.com/articles/dataset/FUCCI_RPE1_cells/22773776/1?file=40461722) |
+| **Data 22** | scNT-seq hematopoiesis dynamics | `dyn.sample_data.hematopoiesis_raw()`|
 
 *Note: Different datasets correspond to specific benchmark tasks; please refer to our benchmark paper for further details.*
 
