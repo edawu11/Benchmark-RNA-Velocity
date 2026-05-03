@@ -1,0 +1,26 @@
+Method,GD,mean_dataset_mean,rank
+LatentVelo (std),1,0.880753021,1
+scTour (ZINB),1,0.862035465,2
+UniTVelo (uni),1,0.861986768,3
+scTour (NB),1,0.834482616,4
+VeloVAE (Full VB),1,0.825549825,5
+Pyro-Velocity (m2),1,0.824694541,6
+VeloAE,1,0.818481585,7
+veloVI,1,0.805112838,8
+Pyro-Velocity (m1),1,0.782486075,9
+UniTVelo (ind),0,0.778338566,10
+DeepVelo,1,0.766649830,11
+scTour (MSE),1,0.763874473,12
+SDEvelo,1,0.757674084,13
+TIVelo (std),0,0.734161638,14
+scVelo (dyn),0,0.733002265,15
+VeloVAE (std),1,0.727259358,16
+cell2fate,1,0.721401910,17
+SvelvetVAE,1,0.699395793,18
+Dynamo (m1),0,0.695318951,19
+scVelo (stc),0,0.669516807,20
+TIVelo (simple),0,0.641644280,21
+GraphVelo (std),0,0.640917230,22
+Velocyto,0,0.622743741,23
+cellDancer,0,0.602170477,24
+kvelo,0,0.553577279,25
