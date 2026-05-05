@@ -1,0 +1,11 @@
+cells,execution_time_sec,peak_memory_mb,status
+1000,,,running
+1000,156.41213973984122,252.60986328125,success
+5000,,,running
+5000,203.78242611605674,1097.45947265625,success
+10000,,,running
+10000,702.4827911229804,2091.55859375,success
+50000,,,running
+50000,,,error
+100000,,,error
+500000,,,error
