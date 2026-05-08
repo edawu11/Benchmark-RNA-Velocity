@@ -8,7 +8,7 @@ import argparse
 import gc
 import matplotlib.pyplot as plt
 from pathlib import Path
-DATA_DIR = Path("/data/wuyd/dataset")  
+DATA_DIR = Path("/root/autodl-tmp/dataset") 
 
 global_parser = argparse.ArgumentParser(description="compute velocity")
 global_parser.add_argument('--dataset', type=str, help="the name of the dataset")
@@ -27,12 +27,12 @@ SAVE_DATA = True
 if SAVE_DATA:
     (DATA_DIR / DATASET / "processed").mkdir(parents=True, exist_ok=True)
 
-def run_sctour_nb(fold):
+def run_sctour_zinb(fold):
     adata = sc.read_h5ad(DATA_DIR / DATASET / "processed" / f"adata_preprocessed_{fold}.h5ad")
-    adata.X = adata.layers["raw_spliced"].astype(np.float32)
+    adata.X = adata.layers["raw_counts"].astype(np.float32)
     sc.pp.calculate_qc_metrics(adata, percent_top=None, log1p=False, inplace=True)
     tnode = sct.train.Trainer(adata, 
-                          loss_mode='nb', 
+                          loss_mode='zinb', 
                           alpha_recon_lec=0.5, 
                           alpha_recon_lode=0.5,
                           random_state=SEED)
@@ -46,11 +46,11 @@ def run_sctour_nb(fold):
     new_adata = anndata.AnnData(adata.obsm['X_TNODE'].copy())
     new_adata.layers['spliced'] = adata.obsm['X_TNODE'].copy()
     new_adata.layers['unspliced'] = adata.obsm['X_TNODE'].copy()
-    new_adata.layers['sctour_nb_velocity'] = adata.obsm['X_VF'].copy()
+    new_adata.layers['sctour_zinb_velocity'] = adata.obsm['X_VF'].copy()
     new_adata.obs.index = adata.obs.index.copy()
     for key in adata.obs:
         new_adata.obs[key] = adata.obs[key].copy()
-    new_adata.obs['sctour_nb_time'] = new_adata.obs['ptime']
+    new_adata.obs['sctour_zinb_time'] = new_adata.obs['ptime']
     for key in adata.uns:
         new_adata.uns[key] = adata.uns[key].copy()
     for key in adata.obsm:
@@ -58,13 +58,13 @@ def run_sctour_nb(fold):
     for key in adata.obsp:
         new_adata.obsp[key] = adata.obsp[key].copy()
 
-    new_adata.write_h5ad(DATA_DIR / DATASET / "processed" / f"adata_run_sctour_nb_{fold}.h5ad")
+    new_adata.write_h5ad(DATA_DIR / DATASET / "processed" / f"adata_run_sctour_zinb_{fold}.h5ad")
     del adata, new_adata
     gc.collect()
 
 if K_FOLD == 0:
     fold = 'full'
-    run_sctour_nb(fold)
+    run_sctour_zinb(fold)
 else:
     for fold in range(K_FOLD):
-        run_sctour_nb(fold)
+        run_sctour_zinb(fold)

@@ -8,7 +8,7 @@ import argparse
 import gc
 import matplotlib.pyplot as plt
 from pathlib import Path
-DATA_DIR = Path("/root/autodl-tmp/dataset")
+DATA_DIR = Path("/data/wuyd/dataset")  
 
 global_parser = argparse.ArgumentParser(description="compute velocity")
 global_parser.add_argument('--dataset', type=str, help="the name of the dataset")
@@ -27,16 +27,15 @@ SAVE_DATA = True
 if SAVE_DATA:
     (DATA_DIR / DATASET / "processed").mkdir(parents=True, exist_ok=True)
 
-def run_sctour_mse(fold):
+def run_sctour_nb(fold):
     adata = sc.read_h5ad(DATA_DIR / DATASET / "processed" / f"adata_preprocessed_{fold}.h5ad")
-    adata.X = adata.layers["spliced"]
+    adata.X = adata.layers["raw_counts"].astype(np.float32)
     sc.pp.calculate_qc_metrics(adata, percent_top=None, log1p=False, inplace=True)
     tnode = sct.train.Trainer(adata, 
-                          loss_mode='mse', 
+                          loss_mode='nb', 
                           alpha_recon_lec=0.5, 
                           alpha_recon_lode=0.5,
-                          random_state=SEED,
-                         batch_norm=False)
+                          random_state=SEED)
     tnode.device = torch.device('cuda:0')
     tnode.train()
     adata.obs['ptime'] = tnode.get_time()
@@ -47,11 +46,11 @@ def run_sctour_mse(fold):
     new_adata = anndata.AnnData(adata.obsm['X_TNODE'].copy())
     new_adata.layers['spliced'] = adata.obsm['X_TNODE'].copy()
     new_adata.layers['unspliced'] = adata.obsm['X_TNODE'].copy()
-    new_adata.layers['sctour_mse_velocity'] = adata.obsm['X_VF'].copy()
+    new_adata.layers['sctour_nb_velocity'] = adata.obsm['X_VF'].copy()
     new_adata.obs.index = adata.obs.index.copy()
     for key in adata.obs:
         new_adata.obs[key] = adata.obs[key].copy()
-    new_adata.obs['sctour_mse_time'] = new_adata.obs['ptime']
+    new_adata.obs['sctour_nb_time'] = new_adata.obs['ptime']
     for key in adata.uns:
         new_adata.uns[key] = adata.uns[key].copy()
     for key in adata.obsm:
@@ -59,13 +58,13 @@ def run_sctour_mse(fold):
     for key in adata.obsp:
         new_adata.obsp[key] = adata.obsp[key].copy()
 
-    new_adata.write_h5ad(DATA_DIR / DATASET / "processed" / f"adata_run_sctour_mse_{fold}.h5ad")
+    new_adata.write_h5ad(DATA_DIR / DATASET / "processed" / f"adata_run_sctour_nb_{fold}.h5ad")
     del adata, new_adata
     gc.collect()
 
 if K_FOLD == 0:
     fold = 'full'
-    run_sctour_mse(fold)
+    run_sctour_nb(fold)
 else:
     for fold in range(K_FOLD):
-        run_sctour_mse(fold)
+        run_sctour_nb(fold)
