@@ -4,7 +4,7 @@
 We present a comprehensive benchmark of 19 computational RNA velocity tools covering 30 distinct methods. We systematically evaluate 25 RNA-only methods across eight evaluation tasks, designating directional consistency, temporal precision, negative control robustness, and sequencing-depth stability as core tasks. We further assess five multimodal-enhanced methods on the multimodal integration task. These assessments use 34 datasets encompassing 26 real-world and eight simulated scenarios.
 
 ## 🚀 RNA Velocity Methods
-### ✂️ Splicing Dynamics–based
+### ✂️ RNA only
 | ID | Method | Paper | Code/Tutorial |
 |:--:|:-------|:------|:--------------|
 | 1 | Velocyto | [RNA velocity of single cells](https://www.nature.com/articles/s41586-018-0414-6) | [Tutorial](https://velocyto.org/) |
@@ -33,7 +33,7 @@ We present a comprehensive benchmark of 19 computational RNA velocity tools cove
 | 3 | PhyloVelo | Phylogenetic tree | [PhyloVelo enhances transcriptomic velocity field mapping using monotonically expressed genes](https://www.nature.com/articles/s41587-023-01887-5) | [GitHub](https://github.com/kunwang34/PhyloVelo); [Tutorial](https://phylovelo.readthedocs.io/) |
 | 4 | VelvetVAE | Metabolic labeling | [Reconstructing developmental trajectories using latent dynamical systems and time-resolved transcriptomics](https://www.sciencedirect.com/science/article/pii/S2405471224001194?via%3Dihub) | [GitHub](https://github.com/rorymaizels/velvetVAE); [Tutorial](https://github.com/rorymaizels/Maizels2023aa/blob/main/analysis/A2.2_benchmarking/B01_velvet_benchmarking.py) |
 | 5 | STT | Spatial transcriptomics | [Spatial transition tensor of single cells](https://www.nature.com/articles/s41592-024-02266-x) | [GitHub](https://github.com/cliffzhou92/STT/tree/release); [Tutorial](https://github.com/cliffzhou92/STT/tree/release/example_notebooks) |
-| 6 | RegVelo | Gene regulatory network | [RegVelo: gene-regulatory-informed dynamics of single cells](https://www.biorxiv.org/content/10.1101/2024.12.11.627935v1) | [GitHub](https://github.com/theislab/RegVelo); [Tutorial](https://regvelo.readthedocs.io/en/latest/) |
+| 6 | RegVelo | Gene regulatory network | [RegVelo: gene-regulatory-informed dynamics of single cells](https://www.sciencedirect.com/science/article/pii/S0092867426004575) | [GitHub](https://github.com/theislab/RegVelo); [Tutorial](https://regvelo.readthedocs.io/en/latest/) |
 | 7 | TFvelo | Transcription factors | [TFvelo: gene regulation inspired RNA velocity estimation](https://www.nature.com/articles/s41467-024-45661-w) | [GitHub](https://github.com/xiaoyeye/TFvelo) |
 | 8 | spVelo | Spatial transcriptomics | [spVelo: RNA velocity inference for multi-batch spatial transcriptomics data](https://link.springer.com/article/10.1186/s13059-025-03701-8) | [GitHub](https://github.com/VivLon/spVelo); [Tutorial](https://github.com/VivLon/spVelo/blob/main/tutorial.ipynb) |
 | 9 | TopoVelo | Spatial transcriptomics | [Topological velocity inference from spatial transcriptomic data](https://www.nature.com/articles/s41587-025-02688-8) | [GitHub](https://github.com/welch-lab/TopoVelo); [Tutorial](https://github.com/welch-lab/TopoVelo/tree/main/notebooks/tutorial) |
@@ -41,7 +41,7 @@ We present a comprehensive benchmark of 19 computational RNA velocity tools cove
 *Note: In our benchmark study, we specifically focus on methods enhanced by chromatin accessibility and metabolic labeling.*
 
 ## 📂 Dataset Information
-The 26 preprocessed real-world datasets in AnnData (`.h5ad`) format will be available from XXX (link to be added). Users can also download the datasets from the public links listed below, although additional upstream preprocessing may be required.
+The 26 preprocessed real-world datasets in AnnData (`.h5ad`) format will be available from Zenodo (link to be added). Users can also download the datasets from the public links listed below, although additional upstream preprocessing may be required.
 
 | Data ID |  Dataset  | Access Method / Download Link |
 |:-------:|:----------|:------------------------------|
@@ -66,10 +66,10 @@ The 26 preprocessed real-world datasets in AnnData (`.h5ad`) format will be avai
 | **Data 19** | PBMC381 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/8-k-pbm-cs-from-a-healthy-donor-2-standard-2-1-0) |
 | **Data 20** | PBMC497 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/pbm-cs-from-a-healthy-donor-targeted-immunology-panel-3-1-standard-4-0-0) |
 | **Data 21** | PBMC769 | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/10-k-pbm-cs-from-a-healthy-donor-v-3-chemistry-3-standard-3-0-0) |
-| **Data 22** | ATAC brain | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/fresh-embryonic-e-18-mouse-brain-5-k-1-standard-1-0-0)<br>Processed: [GitHub](https://github.com/welch-lab/MultiVelo/tree/main/Examples) |
-| **Data 23** | ATAC HSPC | Processed: [Figshare (RNA)](https://doi.org/10.6084/m9.figshare.22575358.v1), [Figshare (ATAC)](https://doi.org/10.6084/m9.figshare.22575343.v1)<br>Raw: [GSE70677](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70677) |
-| **Data 24** | ATAC skin | Processed: [Figshare (RNA)](https://doi.org/10.6084/m9.figshare.22575307.v1), [Figshare (ATAC)](https://doi.org/10.6084/m9.figshare.22575313.v1)<br>Raw: [GSE140203](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE140203) |
-| **Data 25** | FUCCI RPE1 | [Figshare Download](https://figshare.com/articles/dataset/FUCCI_RPE1_cells/22773776/1?file=40461722) |
+| **Data 22** | ATAC HSPC | Processed: [Figshare (RNA)](https://doi.org/10.6084/m9.figshare.22575358.v1), [Figshare (ATAC)](https://doi.org/10.6084/m9.figshare.22575343.v1)<br>Raw: [GSE70677](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70677) |
+| **Data 23** | ATAC human brain | Processed: [GitHub](https://github.com/GreenleafLab/brainchromatin/blob/main/links.txt)<br>Raw: [GSE162170](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE162170) |
+| **Data 24** | ATAC mouse brain | [10x Genomics Dataset](https://www.10xgenomics.com/datasets/fresh-embryonic-e-18-mouse-brain-5-k-1-standard-1-0-0)<br>Processed: [GitHub](https://github.com/welch-lab/MultiVelo/tree/main/Examples) |
+| **Data 25** | scEU-seq cell cycle (FUCCI RPE1) | [Figshare Download](https://figshare.com/articles/dataset/FUCCI_RPE1_cells/22773776/1?file=40461722) |
 | **Data 26** | scNT-seq hematopoiesis dynamics | `dyn.sample_data.hematopoiesis_raw()` |
 
 *Note: Different datasets correspond to specific benchmark tasks; please refer to our benchmark paper for further details.*
@@ -87,10 +87,10 @@ The `preprocessing` folder contains notebooks for:
 ### ▶️ Running RNA Velocity Methods
 We provide Python scripts for each RNA velocity method, paired with their corresponding Conda environments. These pipelines can be executed directly using the provided shell scripts.
 
-For example, to run all splicing dynamics-based methods on **Data 1** (Bone Marrow), execute the following command:
+For example, to run all RNA-only methods on **Data 1** (Bone Marrow), execute the following command:
 
 ```bash
-bash run_all_spliced.sh bone_marrow clusters X_umap 3 1234
+bash run_all_RNA_only.sh bone_marrow clusters X_umap 3 1234
 ```
 
 ### ⚖️ Evaluation and Visualization
