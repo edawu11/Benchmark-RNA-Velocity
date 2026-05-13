@@ -1,15 +1,15 @@
 Method,DL,rank,real
-cell2fate,0,15,17
+cell2fate,0,15,16
 cellDancer,1,24,6
 DeepVelo,1,9,5
-Dynamo (m1),0,6,12
+Dynamo (m1),0,6,13
 GraphVelo (std),0,6,24
   -velo,0,4,19
-LatentVelo (std),1,19,18
+LatentVelo (std),1,19,17
 Pyro-Velocity (m1),0,16,21
 Pyro-Velocity (m2),0,10,7
 scTour (MSE),1,24,25
-scTour (NB),1,21,21
+scTour (NB),1,21,22
 scTour (ZINB),1,19,15
 scVelo (dyn),0,2,23
 scVelo (stc),0,5,4
@@ -21,6 +21,6 @@ UniTVelo (ind),0,13,9
 UniTVelo (uni),0,8,1
 VeloAE,1,11,11
 Velocyto,0,3,3
-VeloVAE (Full VB),1,22,15
+VeloVAE (Full VB),1,22,17
 VeloVAE (std),1,23,19
 veloVI,1,12,7
